@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Basketball Scores</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+  <nav class="main-nav">
+    <ul class="nav-links">
+        <li><a href="#" id="back-to-scores" class="active">Scores</a></li>
+        <li><a href="#" id="rankings-link">Rankings</a></li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle">News</a>
+            <ul class="dropdown-menu">
+                <li><a href="#" id="mens-news">Men's News</a></li>
+                <li><a href="#" id="womens-news">Women's News</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle">Stats</a>
+            <ul class="dropdown-menu">
+                <li><a href="#">Player Stats</a></li>
+                <li><a href="#">Team Stats</a></li>
+                <li><a href="#">Conference Stats</a></li>
+            </ul>
+        </li>
+    </ul>
+    <div class="hamburger-menu"></div>
+  </nav>
+
+    <header>
+        <h1>College Basketball Scores</h1>
+        <div class="toggle-container">
+            <button id="mens-btn" class="active">Men's</button>
+            <button id="womens-btn">Women's</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="filters-container">
+            <div class="date-selector">
+                <button id="prev-day">Previous Day</button>
+                <h2 id="current-date">Today's Games</h2>
+                <button id="next-day">Next Day </button>
+            </div>
+        </div>
+
+        <div id="scores-container" class="scores-container">
+            <!-- scores loaded by js file -->
+        </div>
+        
+        <div id="news-container" class="news-container" style="display: none;">
+          <h2 id="news-title">Basketball News</h2>
+          <div id="news-content">
+              <!-- news loaded by js file -->
+          </div>
+          <button id="back-to-scores" class="back-button">Back to Scores</button>
+        </div>
+
+        <div id="rankings-container" class="rankings-container" style="display: none;">
+          <h2>College Basketball Rankings</h2>
+          <div id="rankings-content">
+              <!-- rankings loaded by js file -->
+          </div>
+          <button id="back-from-rankings" class="back-button">Back to Scores</button>
+        </div>
+
+        <div id="stats-container" class="stats-container" style="display: none;">
+          <h2>Basketball Statistics</h2>
+          <div class="message-box">
+              <div class="message-content">
+                  <p>Currently working on adding stats. Please come back later.</p>
+              </div>
+          </div>
+          <button id="back-from-stats" class="back-button">Back to Scores</button>
+        </div>
+
+        <div class="pagination">
+            <button class="page-btn" disabled>&lt;</button>
+            <span class="page-info">Page 1 of 1</span>
+            <button class="page-btn" disabled>&gt;</button>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About</h3>
+                <p>Stay updated with the latest scores for men's and women's college basketball games.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Data provided by ESPN API</p>
+        </div>
+    </footer>
+
+    <script src="js/utils.js"></script>
+    <script src="js/scores.js"></script>
+    <script src="js/news.js"></script>
+    <script src="js/rankings.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
